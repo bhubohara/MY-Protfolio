@@ -9,8 +9,8 @@ import {
 
 const router = express.Router();
 
-router.post("/add", isAuthenticated, addSoftwareApp);
-router.put("/update/:id", isAuthenticated, UpdatesoftwareApp);
-router.delete("/delete/:id", isAuthenticated, deleteSoftwareApp);
+router.post("/add", addSoftwareApp);
+router.put("/update/:id",  UpdatesoftwareApp);
+router.delete("/delete/:id",  deleteSoftwareApp);
 router.get("/getSoftware", getAllSoftwareApp);
 export default router;
