@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(#642bff, #ff22e6);
+}
+
+.avater-update-btn::file-select-button {
+  width: 100%;
+  padding: 7px;
+  font-weight: 600;
+  border: 1px solid hsl(222.2, 47, 4%, 11.2%);
+  cursor: pointer;
+  color: #fff;
+}
+.avatar-update-btn::file-selector-button:hover {
+  background: transparent;
+  color: hsl(222.2, 47, 4%, 11.2%);
+}
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .app-header {
+  background-color: #f0f0f0;
+}
+
+.light-mode .mode-toggle-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Dark mode styles */
+.night-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.night-mode .app-header {
+  background-color: #333;
+}
+
+.night-mode .mode-toggle-button {
+  background-color: #444;
+  color: white;
+}
+
+/* Button styles */
+.mode-toggle-button {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.mode-toggle-button:hover {
+  background-color: #0056b3;
+}
