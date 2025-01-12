@@ -11,6 +11,7 @@ import userRegisterRoute from "./router/userRoute.js";
 import timelineRouter from "./router/timelineRoutes.js";
 import skillRoute from "./router/skillRoute.js";
 import projectRoute from "./router/projectRoute.js";
+import contactRoute from "./router/contactRoutes.js";
 
 import softwareAppRouter from "./router/softwareAppRoute.js";
 const app = express();
@@ -45,12 +46,13 @@ app.use(
 //routers
 
 app.use("/api/v1/message", massageRouter);
-debugger;
+
 app.use("/api/v1/user", userRegisterRoute);
 app.use("/api/v1/timeline", timelineRouter);
 app.use("/api/v1/software", softwareAppRouter);
 app.use("/api/v1/skill", skillRoute);
 app.use("/api/v1/projects", projectRoute);
+app.use("/api/v1/contacts", contactRoute);
 
 //db connection call
 dbConnect();
