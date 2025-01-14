@@ -50,7 +50,7 @@ const Contact = () => {
           "https://my-protfolio-ghj2.onrender.com/api/v1/contacts/getcontact",
           { withCredentials: true }
         );
-        setContactDetails(data.contact); // Update the state with fetched data
+        setContactDetails(data.contacts); // Update the state with fetched data
       } catch (error) {
         console.error("Error fetching contact details:", error);
       }
