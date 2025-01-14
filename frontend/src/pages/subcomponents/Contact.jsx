@@ -22,7 +22,7 @@ const Contact = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/v1/message/send",
+        "https://my-protfolio-ghj2.onrender.com/api/v1/message/send",
         { senderName, subject, message },
         {
           withCredentials: true,
@@ -47,7 +47,7 @@ const Contact = () => {
     const getContact = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/contacts/getcontact",
+          "https://my-protfolio-ghj2.onrender.com/api/v1/contacts/getcontact",
           { withCredentials: true }
         );
         setContactDetails(data.contact); // Update the state with fetched data

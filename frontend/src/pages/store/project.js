@@ -32,7 +32,7 @@ export const getAllProjects = (id) => async (dispatch) => {
   dispatch(projectSlice.actions.getAllProjectsRequest());
   try {
     const response = await axios.get(
-      `http://localhost:4000/api/v1/projects/getsingle/${id}`,
+      `https://my-protfolio-ghj2.onrender.com/api/v1/projects/getsingle/${id}`,
       { withCredentials: true }
     );
     dispatch(

@@ -34,7 +34,7 @@ export const getUserForPortfolio = () => async (dispatch) => {
   dispatch(userSlice.actions.getProfileRequest()); // Dispatching request action
   try {
     const { data } = await axios.get(
-      "http://localhost:4000/api/v1/user/myprofile",
+      "https://my-protfolio-ghj2.onrender.com/api/v1/user/myprofile",
       {
         withCredentials: true,
       }
