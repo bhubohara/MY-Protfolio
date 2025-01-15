@@ -248,7 +248,7 @@ const Contact = () => {
       <div className="overflow-x-auto px-8 mx-6 mt-12 rounded-xl shadow-lg">
         <Button
           onClick={() => getlisthandle()}
-          className="px-2 text-right text-sm "
+          className="px-2 text-right     text-sm "
         >
           Get Contact
         </Button>

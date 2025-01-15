@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "./slice/userSlice.js";
+import userReducer, { login } from "./slice/userSlice.js";
 import forgotResetPasswordReducer from "./slice/forgotResetpassSlic.js";
 import messageReducer from "./slice/messageSlice.js";
 import timelineReducer from "./slice/timelineSlice.js";
@@ -7,6 +7,7 @@ import skillReducer from "./slice/addSkillSlice.js";
 import softwareapplicationReducer from "./slice/softwareApplicationSlice.js";
 import projectReducer from "./slice/projectSlice.js";
 import contactReducer from "./slice/addContactslice.js";
+import loginReducer from "./slice/loginSclice.js";
 
 export const store = configureStore({
   reducer: {
@@ -18,5 +19,6 @@ export const store = configureStore({
     softwareApplications: softwareapplicationReducer,
     project: projectReducer,
     contact: contactReducer,
+    Login: loginReducer,
   },
 });

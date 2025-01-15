@@ -47,6 +47,7 @@ const Homepage = () => {
 
   const handleLogOut = () => {
     dispatch(logout());
+    navigateTo("/login");
     toast.success("Logged out successfully!");
   };
 

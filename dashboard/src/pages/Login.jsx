@@ -35,12 +35,6 @@ const Login = () => {
       navigateTo("/"); // Redirect to homepage if user is authenticated
     }
 
-    // Check for error only if the login attempt has been made (and failed)
-    if (error) {
-      toast.error(error); // Show error message
-      dispatch(clearAllUserErrors()); // Clear error after showing it
-    }
-
     // Clear errors when loading state changes
     if (loading === false) {
       dispatch(clearAllUserErrors());
