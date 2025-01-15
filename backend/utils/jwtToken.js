@@ -23,7 +23,7 @@ export const generateJwtToken = (user, message, statusCode, res) => {
       expires,
       httpOnly: true,
        sameSite:"None",
-      success:true
+      secure:true
     })
     .json({
       success: true,
