@@ -68,10 +68,7 @@ const Contact = () => {
           <div className="flex justify-center items-center w-full lg:w-1/2">
             <div className="relative group">
               <img
-                src={
-                  contactDetails?.ContactImg?.url ||
-                  "https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139106.jpg?t=st=1736876060~exp=1736879660~hmac=126b62ebd25373dc84196c47a9423fe61cc3b52bd7c9248af7699bb2ceaff251&w=1060"
-                }
+                src={contactDetails?.ContactImg?.url || "default-avatar.jpg"}
                 alt={contactDetails?.titleName || "Contact Avatar"}
                 className="rounded-3xl shadow-2xl border-4 border-blue-500 dark:border-purple-600 w-full h-[650px] max-h-[650px] object-contain transition-transform transform group-hover:scale-90 duration-500 ease-in-out"
               />
