@@ -22,8 +22,6 @@ export const generateJwtToken = (user, message, statusCode, res) => {
     .cookie("token", token, {
       expires,
       httpOnly: true,
-      sameSite:"None",
-      secure:true
     })
     .json({
       success: true,

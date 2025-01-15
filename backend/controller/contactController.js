@@ -57,30 +57,16 @@ export const addContact = catchAsyncErrors(async (req, res, next) => {
 });
 
 // Get All Contacts
+// Get All Contacts (fetch latest added/updated)
 export const getAllContacts = catchAsyncErrors(async (req, res, next) => {
-  const contacts = await contactMeSchema.find();
-
-  if (contacts.length === 0) {
+  const contacts = await contactMeSchema.find().sort({ updatedAt: -1 }); // Sort by updatedAt field
+  if (!contacts || contacts.length === 0) {
     return next(new ErrorHandler("No contacts found!", 404));
   }
 
   res.status(200).json({
     success: true,
-    contacts,
-  });
-});
-
-// Get Single Contact
-export const getSingleContact = catchAsyncErrors(async (req, res, next) => {
-  const contact = await contactMeSchema.findById(req.params.id);
-
-  if (!contact) {
-    return next(new ErrorHandler("Contact not found!", 404));
-  }
-
-  res.status(200).json({
-    success: true,
-    contact,
+    contact: contacts[0], // Send only the latest contact
   });
 });
 
