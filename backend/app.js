@@ -23,7 +23,7 @@ dotenv.config({ path: "./config/config.env" });
 app.use(
   cors({
     //it is an array in here we give  url of frontend. this means those url can connected to this backend
-    origin: [process.env.PORTFOLIO_URL || "https://bhubohara.netlify.app", process.env.DASHBOARD_URL], // process.env.PORTFOLIO_UR
+    origin: [process.env.PORTFOLIO_URL, process.env.DASHBOARD_URL], // process.env.PORTFOLIO_UR
     methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true, //The HTTP Access-Control-Allow-Credentials response header is part of the CORS protocol to allow cross-origin sharing
   })
